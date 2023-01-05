@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格结构</title>
+</head>
+
+<body>
+    <!-- 结构标签： -->
+    <!-- thead 表格头部 -->
+    <!-- tbody 表格主体 -->
+    <!-- tfoot 表格底部 -->
+
+    <!-- 写表格的结构，不是为了人的视觉效果不同，而是为了浏览器的执行效率提升 -->
+    <table border="1">
+        <caption><b>学生成绩单</b></caption>
+        <thead>
+            <tr>
+                <!-- <td></td> -->
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>评语</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- 合并单元格步骤： -->
+            <!-- 1、先删除 被合并的单元格。 -->
+            <!-- 2、在合并保留的单元格的td内，加上关键词 -->
+            <!-- 3、rowspan：垂直合并，colspan：水平合并 -->
+            <!-- 4、合并的原则是“左上”，只保留最上/左的 -->
+            
+            <!-- 注意事项：同一个结构标签中的单元格才能合并，不能跨结构合并（thead、tbody、tfoot） -->
+            <tr>
+                <td>张三</td>
+                <td rowspan="2">100</td>
+                <!-- rowspan内的数字表示的是合并前有几个单元格  colspan内的数字也一样 -->
+                <td>棒</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <!-- <td>99</td> -->
+                <td>厉害</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td colspan="2">98</td>
+                <!-- <td>牛</td> -->
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <td>总结</td>
+            <td>大家</td>
+            <td>做的很好</td>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
